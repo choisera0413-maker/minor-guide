@@ -767,6 +767,34 @@
       .p-label { display: none; }
       .wd-info-grid { grid-template-columns: 1fr; }
     }
+
+
+    /* 구비서류 버튼 스타일 */
+.wd-star-notice-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.wd-star-notice-btn:hover {
+    background-color: #f9f9f9;
+}
+
+/* 안내 문구 상자 여백 */
+.wd-star-notice {
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    font-size: 14px;
+}
   </style>
 </head>
 <body>
@@ -1109,7 +1137,7 @@
               </div>
               <div class="wd-detail-row indent">
                 <span>수수료 : 최초 발급 무료 / 분실 재발급 1,000원</span>
-                <span class="wd-fee-tag">등급할인 적용</span>
+                <span class="wd-fee-tag">등급별 할인</span>
               </div>
               <div class="wd-detail-row" style="margin-top:6px;">
                 <span class="label">② 실물OTP</span>
@@ -1117,20 +1145,26 @@
               </div>
               <div class="wd-detail-row indent">
                 <span>수수료 : 최초 발급 및 재발급 최대 8,000원</span>
-                <span class="wd-fee-tag">등급할인 적용</span>
+                <span class="wd-fee-tag">등급별 할인</span>
               </div>
-            <div class="wd-star-notice">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <span>영업점 방문시 구비서류는 <strong>STEP 06  고객확인제도 재등록</strong>의 방문 시 구비서류와 동일해요. </span><br>
-      
-           <ul class="item-list">
-              <svg class="item-icon" viewBox="0 0 24 24" fill="none" stroke="#006064" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-              <a href="https://m.nhsec.com/static/notice/cpl/ntc01.html" target="_blank" class="text-link">
-                방문 시 구비서류 확인
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-          
-            </div>
+
+
+              <button type="button" class="wd-star-notice-btn" id="certDocBtn">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+  영업점 방문 시 구비서류 확인
+</button>
+
+<div class="wd-star-notice" id="certDocContent" style="display: none;">
+  <span>영업점 방문시 구비서류는 <strong>고객확인제도 재등록</strong>의 방문 시 구비서류와 동일해요.</span><br>
+  
+  <div class="item-list" style="display: flex; align-items: center; gap: 6px; margin-top: 10px;">
+    <svg class="item-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#006064" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+    <a href="https://m.nhsec.com/static/notice/cpl/ntc01.html" target="_blank" class="text-link" style="color: #006064; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;">
+      방문 시 구비서류 확인
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+    </a>
+  </div>
+</div>
         
 
         <li class="wd-card">
