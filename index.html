@@ -38,17 +38,16 @@
       color: var(--text-primary);
       min-height: 100vh;
     }
-<!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="nav-brand">
-            <div class="nav-dot-group">
-        <div class="nav-dot"></div>
-        <div class="nav-dot"></div>
-        <div class="nav-dot"></div>
-      </div>
-    </div>
-  </nav>
-  
+ /* ── NAVBAR ── */
+    .navbar {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(0,42,65,0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 0 28px; height: 58px;
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid rgba(168,195,217,0.18);
+    }
 
     /* ── HERO ── */
     .hero {
